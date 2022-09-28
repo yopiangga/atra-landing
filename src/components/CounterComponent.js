@@ -37,7 +37,7 @@ export function CounterComponent() {
     <div className="bg-gray-100 px-20 py-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-12 box-border text-slate-900">
       <div className="items flex flex-col items-center">
         <FiUsers size={48} />
-        <h2 className="text-4xl font-medium mt-4">{visits?.all + 1000 ?? 0}</h2>
+        <h2 className="text-4xl font-medium mt-4">{visits?.all ?? 0}</h2>
         <h4 className="text-lg mt-2">Total Pengunjung</h4>
       </div>
       <div className="items flex flex-col items-center">

@@ -4,7 +4,7 @@ import videoIcon1 from "src/assets/img/icon/video-icon-1.png";
 
 import { FaAndroid } from "react-icons/fa";
 
-export function CallToActionComponent({ pathDownload }) {
+export function CallToActionComponent({ pathDownload, action }) {
   return (
     <div
       className="flex flex-col justify-center items-center"
@@ -28,6 +28,8 @@ export function CallToActionComponent({ pathDownload }) {
           </p>
           <a
             href={pathDownload}
+            onClick={action}
+            download
             className="mt-10 bg-gradient-to-r from-purple-600 via-purple-600 to-indigo-600 rounded-md py-4 px-12 w-fit text-white text-xs font-medium"
           >
             Unduh
@@ -42,7 +44,7 @@ export function CallToActionComponent({ pathDownload }) {
           className="h-96 w-full rounded-2xl overflow-hidden flex justify-center items-center"
           style={{ backgroundImage: `url(${video1})`, backgroundSize: "cover" }}
         >
-          <a href="https://www.youtube.com/watch?v=06ix0j8gnrk" target="_blank">
+          <a href="https://youtu.be/qQq6awhAcSI" target="_blank">
             <img src={videoIcon1} className="hover:cursor-pointer" />
           </a>
         </div>
@@ -51,7 +53,7 @@ export function CallToActionComponent({ pathDownload }) {
   );
 }
 
-export function CallToActionComponentText({ pathDownload }) {
+export function CallToActionComponentText({ pathDownload, action }) {
   return (
     <div className="flex justify-center bg-gradient-to-r from-purple-600 via-purple-600 to-indigo-600">
       <div className="w-10/12 py-32 text-center text-white flex flex-col items-center">
@@ -62,6 +64,7 @@ export function CallToActionComponentText({ pathDownload }) {
         </p>
         <a
           download
+          onClick={action}
           href={pathDownload}
           className="mt-8 border border-white rounded-lg py-3 px-8 flex gap-7"
         >

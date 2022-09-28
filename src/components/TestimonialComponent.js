@@ -3,6 +3,12 @@ import Slider from "react-slick";
 import img1 from "src/assets/img/testimonials/testi-1.png";
 import img2 from "src/assets/img/testimonials/testi-2.png";
 import img3 from "src/assets/img/testimonials/testi-3.png";
+
+import tutus from "src/assets/img/testimonials/tutus.jpeg";
+import atung from "src/assets/img/testimonials/atung.jpeg";
+import garry from "src/assets/img/testimonials/garry.jpeg";
+
+import imgUser from "src/assets/img/testimonials/user.png";
 import { FaQuoteLeft } from "react-icons/fa";
 
 export function TestimonialComponent() {
@@ -29,10 +35,30 @@ export function TestimonialComponent() {
     },
     {
       name: "Aprial Iqbal Lubis",
+      desc: "Aplikasi ini tidak sulit untuk membantu penyandang low vision dalam memperoleh informasi lebih cepat.",
       title:
-        "Aplikasi ini tidak sulit untuk membantu penyandang low vision dalam memperoleh informasi lebih cepat.",
-      desc: "Mahasiswa Institut Teknologi Sepuluh Nopember, Sahabat Low Vision",
+        "Mahasiswa Institut Teknologi Sepuluh Nopember, Sahabat Low Vision",
       img: img3,
+    },
+    {
+      name: "Gery Akbar",
+      title: "Mahasiswa Universitas Brawijaya, Penyandang Low Vision",
+      desc: "Aplikasi ini menjawab kesulitan saya yang tidak bisa membaca tulisan pada gambar. Saran dari saya bisa lebih bagus jika terdapat tampilan dark mode.",
+      img: garry,
+    },
+    {
+      name: "Pak Atung",
+      title:
+        "Guru Bahasa Indonesia Sekolah Luar Biasa - Tunanetra, penyandang tunanetra",
+      desc: "Aplikasi yang bagus, saya sangat mendukung pengembangan aplikasi seperti ini. Akan lebih bagus jika aplikasi bisa free terus untuk digunakan.",
+      img: atung,
+    },
+    {
+      name: "Pak Tutus",
+      title:
+        "Guru Matematika Sekolah Luar Biasa - Tunanetra, penyandang tunanetra",
+      desc: "Sudah banyak aplikasi untuk tunanetra. Namun, aplikasi ini beda dari yang lain karena mudah digunakan. Dengan adanya auto capture mempermudah pengguna untuk menangkap gambar secara otomatis.",
+      img: tutus,
     },
   ];
 
@@ -57,7 +83,11 @@ export function TestimonialComponent() {
                 <FaQuoteLeft className="text-gray-300 text-4xl mx-auto" />
                 <p className="mt-8 text-lg text-gray-600">{el.desc}</p>
                 <div className="img w-20 h-20 mx-auto mt-10 rounded-full overflow-hidden">
-                  <img src={el.img} layout="responsive" objectFit="contain" />
+                  <img
+                    src={el.img ?? imgUser}
+                    layout="responsive"
+                    objectFit="contain"
+                  />
                 </div>
                 <h4 className="text-lg text-gray-900 mt-4 font-medium">
                   {el.name}

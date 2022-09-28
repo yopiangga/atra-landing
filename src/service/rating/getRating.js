@@ -14,5 +14,5 @@ export async function getRatingCount() {
 
   rate = rate / i;
 
-  return rate;
+  return { rate: rate, user: i };
 }

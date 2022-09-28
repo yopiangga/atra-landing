@@ -16,6 +16,8 @@ import { CounterComponent } from "src/components/CounterComponent";
 import { ButtonRating, RatingComponent } from "src/components/RatingComponent";
 import { useEffect, useState } from "react";
 import getLinkDownload from "src/service/link-download/getLinkDownload";
+import sendDownload from "src/service/download/sendDownload";
+import sendVisit from "src/service/visit/sendVisit";
 
 export function LandingPage() {
   const [showRating, setShowRating] = useState(false);
@@ -29,7 +31,13 @@ export function LandingPage() {
       .catch((err) => {
         console.log(err);
       });
+
+    sendVisit("-");
   }, []);
+
+  function handleCounterDownload() {
+    sendDownload("-");
+  }
 
   return (
     <>
@@ -40,13 +48,22 @@ export function LandingPage() {
         }}
       />
       <NavbarComponentDefault />
-      <BannerComponent pathDownload={pathDownload} />
+      <BannerComponent
+        pathDownload={pathDownload}
+        action={handleCounterDownload}
+      />
       <CounterComponent />
       <FiturComponent />
-      <CallToActionComponent pathDownload={pathDownload} />
+      <CallToActionComponent
+        pathDownload={pathDownload}
+        action={handleCounterDownload}
+      />
       <ScreenshotComponent />
       <TestimonialComponent />
-      <CallToActionComponentText pathDownload={pathDownload} />
+      <CallToActionComponentText
+        pathDownload={pathDownload}
+        action={handleCounterDownload}
+      />
       <MapComponent />
       <ContactComponent />
       <FooterComponent />

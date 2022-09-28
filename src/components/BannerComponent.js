@@ -4,13 +4,15 @@ import { useEffect, useState } from "react";
 import { getRatingCount } from "src/service/rating/getRating";
 import { FaStar } from "react-icons/fa";
 
-export function BannerComponent({ pathDownload }) {
+export function BannerComponent({ pathDownload, action }) {
   const [ratingCount, setRatingCount] = useState(5);
+  const [countRating, setCountRating] = useState(0);
 
   useEffect(() => {
     getRatingCount()
       .then((res) => {
-        setRatingCount(res);
+        setRatingCount(res.rate);
+        setCountRating(res.user);
       })
       .catch((err) => {
         console.log(err);
@@ -46,8 +48,10 @@ export function BannerComponent({ pathDownload }) {
               DALAM MEMBACA
             </p>
             <ShowRating />
+            <h5 className="mt-2 text-sm">{countRating} penilaian pengguna</h5>
             <a
               href={pathDownload}
+              onClick={action}
               download
               className="mt-10 bg-white rounded-md py-4 px-12 w-fit text-slate-900 text-xs font-medium"
             >
