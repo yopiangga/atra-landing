@@ -13,5 +13,5 @@ export default async function getDownloadCount() {
 
     allCount = allCount + 1;
   });
-  return { all: allCount, daily: daily };
+  return { all: allCount + 139, daily: daily };
 }

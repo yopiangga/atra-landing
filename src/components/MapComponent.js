@@ -24,15 +24,12 @@ export function MapComponent() {
               width="1080"
               height="412"
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=pens&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=politeknik%20elektronika%20negeri%20surabaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
               frameborder="0"
               scrolling="no"
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            <a href="https://putlocker-is.org">putlocker</a>
-            <br />
-            <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
           </div>
         </div>
       </div>

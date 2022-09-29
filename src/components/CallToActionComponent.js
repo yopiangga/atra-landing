@@ -30,7 +30,7 @@ export function CallToActionComponent({ pathDownload, action }) {
             href={pathDownload}
             onClick={action}
             download
-            className="mt-10 bg-gradient-to-r from-purple-600 via-purple-600 to-indigo-600 rounded-md py-4 px-12 w-fit text-white text-xs font-medium"
+            className="mt-10 block bg-gradient-to-r from-purple-600 via-purple-600 to-indigo-600 rounded-md py-4 px-12 w-fit text-white text-xs font-medium"
           >
             Unduh
           </a>

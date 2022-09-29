@@ -13,5 +13,5 @@ export default async function getVisitCount() {
 
     allCount = allCount + 1;
   });
-  return { all: allCount + 1000, daily: daily };
+  return { all: allCount + 1600, daily: daily };
 }
